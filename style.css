@@ -1,297 +1,33 @@
+body {
+      margin-top: 20px;
+      background-color: #ebe9dc;
+    }
 
+    .card {
+      box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+    }
 
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      border: 0 solid rgba(0, 0, 0, .125);
+      border-radius: 1rem;
+    }
 
+    .IMGCENTER {
+      display: block;
+      /* Make the image a block-level element */
+      margin: 0 auto;
+      /* Center the image horizontally and vertically */
+    }
 
-.IMGCENTER {
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* reset */
-        * {
-            box-sizing: content-box;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            text-decoration: none;
-            vertical-align: top;
-        }
-
-        /* content editable */
-        *[contenteditable] {
-            border-radius: 0.25em;
-            min-width: 1em;
-            outline: 0;
-            cursor: pointer;
-        }
-
-        *[contenteditable]:hover,
-        *[contenteditable]:focus,
-        td:hover *[contenteditable],
-        td:focus *[contenteditable],
-        img.hover {
-            background: #DEF;
-            box-shadow: 0 0 1em 0.5em #DEF;
-        }
-
-        span[contenteditable] {
-            display: inline-block;
-        }
-
-        /* heading */
-        h1 {
-            font: bold 70% ;
-            font-size: x-large;
-            text-align: center;
-
-
-        }
-
-        /* table */
-        table {
-            font-size: 75%;
-            table-layout: fixed;
-            width: 100%;
-            border-collapse: collapse;
-            /* Añadido para evitar problemas de bordes en algunas situaciones */
-        }
-
-        th,
-        td {
-            border: 0.1em solid #818181;
-            /* Añadido un borde sólido para todas las celdas */
-            padding: 0.5em;
-            position: relative;
-            text-align: left;
-        }
-
-        th {
-            background: #f0f0f0;
-            color: #1e1e1e;
-        }
-
-        /* page */
-        html {
-            font: 16px/1 'Open Sans', sans-serif;
-            overflow: auto;
-            padding: 0.5in;
-            background: #ffffff;
-            cursor: default;
-        }
-
-        body {
-            box-sizing: border-box;
-            margin: 0 auto;
-            padding: 0.5in;
-            background: #FFF;
-            box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
-        }
-
-      
-    
-
-  
-
-        header address {
-            float: left;
-            font-size: 75%;
-            font-style: normal;
-            line-height: 1.25;
-            margin: 0 1em 1em 0;
-        }
-
-        header span,
-        header img {
-            display: block;
-            float: right;
-
-            max-height: 25%;
-            max-width: 60%;
-            position: relative;
-        }
-
-        header img {
-            max-height: 100%;
-            max-width: 100%;
-        }
-
-      
-    
-        /* article */
-        article,
-        article address,
-        table.meta,
-        table.inventory {
-            margin: 0 0 3em;
-            clear: both;
-        }
-
-        article:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        article h1 {
-            clip: rect(0 0 0 0);
-            position: absolute;
-        }
-
-        article address {
-            float: left;
-            font-size: 125%;
-            font-weight: bold;
-        }
-
-        /* table meta & balance */
-        table.meta,
-        table.balance {
-            float:  right;
-            width: 25%;
-        }
-
-        table.meta:after,
-        table.balance:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* table meta */
-        table.meta th {
-            width: 40%;
-        }
-
-        table.meta td {
-            width: 60%;
-        }
-
-        /* table items */
-        table.inventory th {
-            font-weight: bold;
-            text-align: center;
-        }
-
-        table.inventory td {
-            text-align: right;
-        }
-
-        table {
-            font-size: 75%;
-            table-layout: fixed;
-            width: 100%;
-        }
-
-        table {
-            border-collapse: separate;
-            border-spacing: 2px;
-        }
-
-        th,
-        td {
-            border-width: 1px;
-            padding: em;
-            position: relative;
-            text-align: left;
-        }
-
-        th,
-        td {
-            border-radius: 0.20em;
-            border-style: solid;
-        }
-
-        .hedarwhite {
-            background: #2d2d2d;
-            border-color: #a4a4a4;
-            color: #ffffff;
-        }
-
-        td {
-            border-color: #bfb1b1;
-        }
-
-        /* aside */
-        aside h1 {
-            border: none;
-            border-width: 0 0 1px;
-
-            border-color: #8b8006;
-            border-bottom-style: solid;
-        }
-
-        /* javascript */
-        .add,
-        
-
-
-        .cut {
-            opacity: 0;
-            position: absolute;
-            top: 0;
-            left: -1.5em;
-        }
-
-       
-
-        @media print {
-            * {
-                -webkit-print-color-adjust: exact;
-            }
-
-            html {
-                background: none;
-                padding: 0;
-            }
-
-            body {
-                box-shadow: none;
-                margin: 0;
-            }
-
-            span:empty {
-                display: none;
-            }
-
-            .add,
-            .cut {
-                display: none;
-            }
-        }
-
-        @page {
-            margin: 0;
-        }
-
-        /* Agrega un estilo personalizado para la línea debajo de la dirección y el número */
-        .custom-line {
-            border: none;
-            border-bottom: 1px solid #000;
-            margin: 5px 0;
-        }
-
-        /* Estilo para el texto más pequeño */
-        
-
-            .centrarprc{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            font-size: large;
-            
-            
-            }
-
-           .header_color_deuda{   
-                display: flex;
-                justify-content: center;
-            color: #2b2b2b;
-            background-color: #ffffff;
-            margin: 0;
-            padding: 0.0em 0;
-    
-            border-radius: 10px; /* Ajusta el valor según tus preferencias */
-
-            }
-
+    .espacio-vertical {
+      margin-top: 24px;
+      /* Ajusta el valor según tus necesidades */
+      margin-bottom: 24px;
+    }
